@@ -276,5 +276,11 @@ int main(int argc, char **argv)
 <img width="1920" height="1080" alt="Screenshot 2026-02-09 094113" src="https://github.com/user-attachments/assets/6eeb19e4-0179-48b0-94ba-bb15847d0409" />
 
 ## RESULT:
+(i) Result
 
+block.x = 1024 performed better than block.x = 1023 because it is a multiple of the warp size (32), leading to efficient GPU thread execution. block.x = 1023 caused partial warps and slightly higher execution time.
+
+(ii) Result
+
+With block.x = 256 and each thread processing two elements, performance improved due to reduced thread overhead and better memory utilization compared to other configurations.
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
